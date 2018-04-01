@@ -1,5 +1,9 @@
 package com.pjh.admin.service;
 
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 public interface UserService {
     /**
      * 新增用户
@@ -7,5 +11,5 @@ public interface UserService {
      * @param age
      */
     void create(String name, Integer age);
-
+    List<Map<String, Object>> getUserList(HashMap<Object, Object> inMap);
 }

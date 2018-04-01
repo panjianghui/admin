@@ -8,6 +8,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest
@@ -25,5 +29,10 @@ CacheUtils redisBusiness;
 //        log.info("测试输出日志");
 
 //        userSerivce.create("ming",1);
+    }
+    @Test
+    public void testSelectUserList(){
+        List<Map<String, Object>> userList = userSerivce.getUserList(new HashMap<>());
+        System.out.println(userList);
     }
 }

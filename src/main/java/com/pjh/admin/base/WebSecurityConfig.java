@@ -14,6 +14,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
+        http.headers().frameOptions().disable(); // 解决spring boot不允许加载frame问题
         http
                 .authorizeRequests()
                 .antMatchers("/", "/home").permitAll()//定义不需要登录权限的页面

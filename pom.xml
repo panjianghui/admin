@@ -6,8 +6,8 @@
 	<groupId>com.pjh</groupId>
 	<artifactId>admin</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
-
+	<!--<packaging>jar</packaging>-->
+	<packaging>war</packaging>
 	<name>admin</name>
 	<description>Demo project for Spring Boot</description>
 
@@ -75,7 +75,12 @@
 			<artifactId>mysql-connector-java</artifactId>
 			<version>5.1.21</version>
 		</dependency>
-
+		<!--因配置外部TOMCAT 而配置-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-tomcat</artifactId>
+			<scope>provided</scope>
+		</dependency>
     </dependencies>
 
 	<build>
